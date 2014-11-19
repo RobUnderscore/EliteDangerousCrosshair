@@ -9,12 +9,18 @@ Original code at https://github.com/RobCubed/EliteDangerousCrosshair_original
 
 ========================
 
-v1.1 Changes:
-
 - Optimized FPS loss (slower refresh rate, which is unnecessary unless you are moving or resizing the window)
 - Added reticle size slider
 - Added line thickness options
 - Changed from a console window to a nicer looking form window
+- Added icon to desktop
+
+Planned for the future:
+
+- Additional crosshairs (possibly custom, choose a GIF/PNG etc)
+- Color picking for the crosshairs
+- Opacity slider for the crosshairs
+- Switching from double buffered graphics to XNA/DirectX overlay (still not injecting into the game, simply a transparent window in Windows itself)
 
 ========================
 
