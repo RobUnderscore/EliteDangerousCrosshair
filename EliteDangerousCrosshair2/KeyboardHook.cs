@@ -20,7 +20,7 @@ namespace EliteDangerousCrosshair2
         /// </summary>
         private sealed class Window : NativeWindow, IDisposable
         {
-            private const int WM_HOTKEY = 0x0312;
+            private const int WM_HOTKEY = 0x0312; 
 
             public Window()
             {
