@@ -1,4 +1,4 @@
-EliteDangerousCrosshair v.1.1
+EliteDangerousCrosshair v1.1
 =======================
 
 Crosshair for Elite Dangerous to assist with piloting in Frameshift Mode/Docking
