@@ -43,6 +43,7 @@
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxOpacity = new System.Windows.Forms.ComboBox();
+            this.checkBoxNubs = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,11 +162,23 @@
             this.comboBoxOpacity.TabIndex = 12;
             this.comboBoxOpacity.SelectedIndexChanged += new System.EventHandler(this.comboBoxOpacity_SelectedIndexChanged);
             // 
+            // checkBoxNubs
+            // 
+            this.checkBoxNubs.AutoSize = true;
+            this.checkBoxNubs.Location = new System.Drawing.Point(20, 135);
+            this.checkBoxNubs.Name = "checkBoxNubs";
+            this.checkBoxNubs.Size = new System.Drawing.Size(51, 17);
+            this.checkBoxNubs.TabIndex = 13;
+            this.checkBoxNubs.Text = "Nubs";
+            this.checkBoxNubs.UseVisualStyleBackColor = true;
+            this.checkBoxNubs.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 215);
+            this.Controls.Add(this.checkBoxNubs);
             this.Controls.Add(this.comboBoxOpacity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -204,6 +217,7 @@
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxOpacity;
+        private System.Windows.Forms.CheckBox checkBoxNubs;
 
     }
 }

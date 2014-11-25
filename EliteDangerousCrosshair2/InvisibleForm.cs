@@ -17,6 +17,7 @@ namespace EliteDangerousCrosshair2
         {
             InitializeComponent();
 
+
             CircleDem = 50;
             _locationUpdate = new BackgroundWorker();
             _locationUpdate.DoWork += _DoWork;
@@ -56,6 +57,11 @@ namespace EliteDangerousCrosshair2
                     Invoke(value ? new MethodInvoker(Show) : Hide);
                 }
             }
+        }
+
+        public void EnableNubs(bool b)
+        {
+            bufferedPanel1.NubsActivated = b;
         }
 
         public void SetLineThickness(int i)

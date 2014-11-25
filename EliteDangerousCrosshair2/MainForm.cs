@@ -276,5 +276,17 @@ namespace EliteDangerousCrosshair2
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxNubs.Checked)
+            {
+                _invisibleForm.EnableNubs(true);
+            }
+            else
+            {
+                _invisibleForm.EnableNubs(false);
+            }
+        }
+
     }
 }

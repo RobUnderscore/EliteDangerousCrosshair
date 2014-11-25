@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace EliteDangerousCrosshair2
         private int _yScreen;
         private int _circleDim;
         private bool _programFocus;
+        private bool _nubsActivated;
         private int _xDraw;
         private int _xScreen;
         private Graphics _g;
@@ -32,6 +34,15 @@ namespace EliteDangerousCrosshair2
         {
             _outline.Color = color;
             Invalidate();
+        }
+
+        public bool NubsActivated { 
+            get { return _nubsActivated; }
+            set
+            {
+                _nubsActivated = value;
+                Invalidate();
+            }
         }
 
         public int CircleDim
@@ -130,6 +141,15 @@ namespace EliteDangerousCrosshair2
             Height = YScreen;
             _rEllipse.X = (XScreen/2) - (_rEllipse.Width/2);
             _rEllipse.Y = (YScreen/2) - (_rEllipse.Height/2);
+
+            if (_nubsActivated)
+            {
+                _g.DrawLine(_outline, _rEllipse.X + (_rEllipse.Width / 2), _rEllipse.Y + (CircleDim / 3), _rEllipse.X + (_rEllipse.Width / 2), _rEllipse.Y - (CircleDim / 6));
+                _g.DrawLine(_outline, _rEllipse.X + (_rEllipse.Width / 2), _rEllipse.Y + CircleDim + (CircleDim / 6), _rEllipse.X + (_rEllipse.Width / 2), _rEllipse.Y + CircleDim - (CircleDim / 3));
+                _g.DrawLine(_outline, _rEllipse.X + (_rEllipse.Width / 3), _rEllipse.Y + (_rEllipse.Height / 2), _rEllipse.X - (_rEllipse.Width / 6), _rEllipse.Y + (_rEllipse.Height / 2));
+                _g.DrawLine(_outline, _rEllipse.X + _rEllipse.Width + (_rEllipse.Width / 6), _rEllipse.Y + (_rEllipse.Height / 2), _rEllipse.X + _rEllipse.Width - (_rEllipse.Width / 3), _rEllipse.Y + (_rEllipse.Height / 2));
+
+            }
 
 
             _g.DrawEllipse(_outline, _rEllipse);
