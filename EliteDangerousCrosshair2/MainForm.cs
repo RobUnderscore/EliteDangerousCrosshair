@@ -61,7 +61,6 @@ namespace EliteDangerousCrosshair2
                 hook_KeyPressed;
             // register the control + shift + F12 combination as hot key.
             _hook.RegisterHotKey((ModifierKeys) 2 | (ModifierKeys) 4, Keys.F1);
-
             InitComboBox();
         }
 
@@ -72,14 +71,14 @@ namespace EliteDangerousCrosshair2
                 comboBoxLineThickness.Items.Add(i.ToString());
             }
 
-            comboBoxLineThickness.SelectedIndex = 1;
+            comboBoxLineThickness.SelectedIndex = (int)Properties.Settings.Default["LineThicknessIndex"];
 
             for (int i = 0; i <= 100; i += 10)
             {
                 comboBoxOpacity.Items.Add(i.ToString() + "%");
             }
 
-            comboBoxOpacity.SelectedIndex = 10;
+            comboBoxOpacity.SelectedIndex = (int) Properties.Settings.Default["OpacityIndex"];
         }
 
         private void hook_KeyPressed(object sender, KeyPressedEventArgs e)
@@ -232,6 +231,8 @@ namespace EliteDangerousCrosshair2
             int size = trackBar1.Value*5;
             label1.Text = "Reticle Size: " + size + "px";
             _invisibleForm.CircleDem = size;
+            Properties.Settings.Default["ReticleSizeIndex"] = size;
+            Properties.Settings.Default.Save();
         }
 
         private void linkUpdateLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -252,6 +253,8 @@ namespace EliteDangerousCrosshair2
             if (comboBoxLineThickness.SelectedItem != null)
             {
                 _invisibleForm.SetLineThickness(Convert.ToInt32(comboBoxLineThickness.SelectedItem));
+                Properties.Settings.Default["LineThicknessIndex"] = comboBoxLineThickness.SelectedIndex;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -263,6 +266,8 @@ namespace EliteDangerousCrosshair2
             {
                 panel1.BackColor = colorDialog1.Color;
                 _invisibleForm.SetColor(colorDialog1.Color);
+                Properties.Settings.Default["ReticleColor"] = colorDialog1.Color;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -273,6 +278,8 @@ namespace EliteDangerousCrosshair2
                 int i = Convert.ToInt32(comboBoxOpacity.SelectedItem.ToString().TrimEnd('%'));
                 double d = i/100.0;
                 _invisibleForm.SetOpacity(d);
+                Properties.Settings.Default["OpacityIndex"] = comboBoxOpacity.SelectedIndex;
+                Properties.Settings.Default.Save();
             }
         }
 

@@ -1,4 +1,6 @@
-﻿namespace EliteDangerousCrosshair2
+﻿using System.Drawing;
+
+namespace EliteDangerousCrosshair2
 {
     partial class MainForm
     {
@@ -74,7 +76,7 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(321, 45);
             this.trackBar1.TabIndex = 1;
-            this.trackBar1.Value = 10;
+            this.trackBar1.Value = ((int)Properties.Settings.Default["ReticleSizeIndex"]) / 5;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label1
@@ -84,7 +86,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Reticle Size : 50px";
+            this.label1.Text = "Reticle Size : " + Properties.Settings.Default["ReticleSizeIndex"] + "px";
             // 
             // linkUpdateLabel
             // 
@@ -137,7 +139,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BackColor = (Color) Properties.Settings.Default["ReticleColor"];
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(87, 107);
             this.panel1.Name = "panel1";
@@ -171,6 +173,7 @@
             this.checkBoxNubs.TabIndex = 13;
             this.checkBoxNubs.Text = "Nubs";
             this.checkBoxNubs.UseVisualStyleBackColor = true;
+            this.checkBoxNubs.Checked = (bool) Properties.Settings.Default["NubsActivated"];
             this.checkBoxNubs.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // MainForm

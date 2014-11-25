@@ -8,7 +8,7 @@ namespace EliteDangerousCrosshair2
     internal sealed class BufferedPanel : Panel
     {
         private static Rectangle _rEllipse;
-        private static Pen _outline = new Pen(Color.Red);
+        private static Pen _outline = new Pen((Color)Properties.Settings.Default["ReticleColor"]);
         private int _yDraw;
         private int _yScreen;
         private int _circleDim;
@@ -28,6 +28,7 @@ namespace EliteDangerousCrosshair2
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             UpdateStyles();
+            NubsActivated = (bool) Properties.Settings.Default["NubsActivated"];
         }
 
         public void SetColor(Color color)
@@ -41,6 +42,8 @@ namespace EliteDangerousCrosshair2
             set
             {
                 _nubsActivated = value;
+                Properties.Settings.Default["NubsActivated"] = value;
+                Properties.Settings.Default.Save();
                 Invalidate();
             }
         }

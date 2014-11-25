@@ -18,7 +18,7 @@ namespace EliteDangerousCrosshair2
             InitializeComponent();
 
 
-            CircleDem = 50;
+            CircleDem = (int) Properties.Settings.Default["ReticleSizeIndex"];
             _locationUpdate = new BackgroundWorker();
             _locationUpdate.DoWork += _DoWork;
         }
