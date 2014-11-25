@@ -1,13 +1,21 @@
-EliteDangerousCrosshair v1.1
+EliteDangerousCrosshair v1.2
 =======================
 
-Crosshair for Elite Dangerous to assist with piloting in Frameshift Mode/Docking
+Crosshair for Elite Dangerous to assist with piloting in Frameshift Mode/Docking. Download in the 'releases' section above.
 
 Rewrote to deal with some FPS issues.
 
 Original code at https://github.com/RobCubed/EliteDangerousCrosshair_original
 
 ========================
+1.2 Changes:
+
+ - Added 'nubs' (toggleable) to the crosshair
+ - Color picking for crosshairs (any color)
+ - Opacity selector for crosshairs (from 0% to 100%)
+ - All changes now persist across application launches - as soon as you select something, it changes
+
+1.1 Changes:
 
 - Optimized FPS loss (slower refresh rate, which is unnecessary unless you are moving or resizing the window)
 - Added reticle size slider
@@ -15,11 +23,11 @@ Original code at https://github.com/RobCubed/EliteDangerousCrosshair_original
 - Changed from a console window to a nicer looking form window
 - Added icon to desktop
 
+========================
+
 Planned for the future:
 
 - Additional crosshairs (possibly custom, choose a GIF/PNG etc)
-- Color picking for the crosshairs
-- Opacity slider for the crosshairs
 - Switching from double buffered graphics to XNA/DirectX overlay (still not injecting into the game, simply a transparent window in Windows itself)
 
 ========================
