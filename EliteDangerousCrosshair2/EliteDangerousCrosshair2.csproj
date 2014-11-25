@@ -11,6 +11,7 @@
     <AssemblyName>EliteDangerousCrosshair2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,13 +23,13 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <SupportUrl>https://github.com/RobCubed/EliteDangerousCrosshair</SupportUrl>
-    <ProductName>EliteDangerousCrosshair</ProductName>
+    <ProductName>EliteDangerousCrosshair v1.2</ProductName>
     <PublisherName>Robert Whittemore</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationVersion>1.2.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,10 +52,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>EliteDangerousCrosshair2.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>1416041238_131776.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C98A29CB63372AC1F3EADE3C231CDA837A3A81F5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EliteDangerousCrosshair2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -112,6 +125,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="EliteDangerousCrosshair2_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
