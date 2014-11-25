@@ -18,9 +18,13 @@ namespace EliteDangerousCrosshair2
             InitializeComponent();
 
             CircleDem = 50;
-
             _locationUpdate = new BackgroundWorker();
             _locationUpdate.DoWork += _DoWork;
+        }
+
+        public void SetOpacity(double d)
+        {
+            Opacity = d;
         }
 
         public WindowLocation GameWindowLocation

@@ -40,6 +40,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxOpacity = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +89,7 @@
             // 
             this.linkUpdateLabel.AutoSize = true;
             this.linkUpdateLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkUpdateLabel.Location = new System.Drawing.Point(33, 169);
+            this.linkUpdateLabel.Location = new System.Drawing.Point(33, 191);
             this.linkUpdateLabel.Name = "linkUpdateLabel";
             this.linkUpdateLabel.Size = new System.Drawing.Size(265, 13);
             this.linkUpdateLabel.TabIndex = 4;
@@ -97,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 145);
+            this.label3.Location = new System.Drawing.Point(17, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(310, 13);
             this.label3.TabIndex = 5;
@@ -106,16 +109,16 @@
             // comboBoxLineThickness
             // 
             this.comboBoxLineThickness.FormattingEnabled = true;
-            this.comboBoxLineThickness.Location = new System.Drawing.Point(282, 101);
+            this.comboBoxLineThickness.Location = new System.Drawing.Point(268, 101);
             this.comboBoxLineThickness.Name = "comboBoxLineThickness";
-            this.comboBoxLineThickness.Size = new System.Drawing.Size(43, 21);
+            this.comboBoxLineThickness.Size = new System.Drawing.Size(57, 21);
             this.comboBoxLineThickness.TabIndex = 7;
             this.comboBoxLineThickness.SelectedIndexChanged += new System.EventHandler(this.comboBoxLineThickness_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(194, 104);
+            this.label4.Location = new System.Drawing.Point(180, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 8;
@@ -140,11 +143,31 @@
             this.panel1.Size = new System.Drawing.Size(12, 10);
             this.panel1.TabIndex = 10;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(216, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Opacity:";
+            // 
+            // comboBoxOpacity
+            // 
+            this.comboBoxOpacity.FormattingEnabled = true;
+            this.comboBoxOpacity.Location = new System.Drawing.Point(268, 132);
+            this.comboBoxOpacity.Name = "comboBoxOpacity";
+            this.comboBoxOpacity.Size = new System.Drawing.Size(57, 21);
+            this.comboBoxOpacity.TabIndex = 12;
+            this.comboBoxOpacity.SelectedIndexChanged += new System.EventHandler(this.comboBoxOpacity_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 194);
+            this.ClientSize = new System.Drawing.Size(346, 215);
+            this.Controls.Add(this.comboBoxOpacity);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -178,6 +201,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxOpacity;
 
     }
 }

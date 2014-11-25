@@ -52,7 +52,7 @@ namespace EliteDangerousCrosshair2
 
             var monitorGame = new Thread(MonitorGameStatus) {IsBackground = true};
             monitorGame.Start();
-            
+
             AddThisId(Process.GetCurrentProcess().MainWindowHandle);
             AddThisId(Handle);
 
@@ -60,7 +60,7 @@ namespace EliteDangerousCrosshair2
             _hook.KeyPressed +=
                 hook_KeyPressed;
             // register the control + shift + F12 combination as hot key.
-            _hook.RegisterHotKey((ModifierKeys)2 | (ModifierKeys)4, Keys.F1);
+            _hook.RegisterHotKey((ModifierKeys) 2 | (ModifierKeys) 4, Keys.F1);
 
             InitComboBox();
         }
@@ -73,6 +73,13 @@ namespace EliteDangerousCrosshair2
             }
 
             comboBoxLineThickness.SelectedIndex = 1;
+
+            for (int i = 0; i <= 100; i += 10)
+            {
+                comboBoxOpacity.Items.Add(i.ToString() + "%");
+            }
+
+            comboBoxOpacity.SelectedIndex = 10;
         }
 
         private void hook_KeyPressed(object sender, KeyPressedEventArgs e)
@@ -140,7 +147,7 @@ namespace EliteDangerousCrosshair2
                 if (_currentId != value)
                 {
                     _currentId = value;
-                    
+
                     if (((value == GameId) || _thisId.Contains(value)) && GameId.ToInt32() != 0)
                     {
                         ActiveGameUi = true;
@@ -244,7 +251,6 @@ namespace EliteDangerousCrosshair2
         {
             if (comboBoxLineThickness.SelectedItem != null)
             {
-                Console.WriteLine(comboBoxLineThickness.SelectedItem);
                 _invisibleForm.SetLineThickness(Convert.ToInt32(comboBoxLineThickness.SelectedItem));
             }
         }
@@ -259,5 +265,16 @@ namespace EliteDangerousCrosshair2
                 _invisibleForm.SetColor(colorDialog1.Color);
             }
         }
+
+        private void comboBoxOpacity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxOpacity.SelectedItem != null)
+            {
+                int i = Convert.ToInt32(comboBoxOpacity.SelectedItem.ToString().TrimEnd('%'));
+                double d = i/100.0;
+                _invisibleForm.SetOpacity(d);
+            }
+        }
+
     }
 }

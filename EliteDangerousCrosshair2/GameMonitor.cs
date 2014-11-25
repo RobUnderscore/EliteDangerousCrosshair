@@ -105,7 +105,7 @@ namespace EliteDangerousCrosshair2
                     hooked = true;
                     break;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     if (!notice)
                     {
