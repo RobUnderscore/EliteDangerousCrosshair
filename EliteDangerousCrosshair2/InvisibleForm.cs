@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace EliteDangerousCrosshair2
@@ -115,6 +116,10 @@ namespace EliteDangerousCrosshair2
             //get { return true; }
         //}
 
+        public void SetColor(Color color)
+        {
+            bufferedPanel1.SetColor(color);
+        }
 
         protected override CreateParams CreateParams
         {

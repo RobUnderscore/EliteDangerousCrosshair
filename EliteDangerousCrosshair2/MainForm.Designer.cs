@@ -37,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxLineThickness = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,11 +121,32 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Line Thickness:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Color";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(87, 107);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(12, 10);
+            this.panel1.TabIndex = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 194);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxLineThickness);
             this.Controls.Add(this.label3);
@@ -151,6 +175,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxLineThickness;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
 
     }
 }

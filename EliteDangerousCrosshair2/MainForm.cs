@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -250,5 +249,15 @@ namespace EliteDangerousCrosshair2
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = colorDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                panel1.BackColor = colorDialog1.Color;
+                _invisibleForm.SetColor(colorDialog1.Color);
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace EliteDangerousCrosshair2
     internal sealed class BufferedPanel : Panel
     {
         private static Rectangle _rEllipse;
-        private static Pen _outline;
+        private static Pen _outline = new Pen(Color.Red);
         private int _yDraw;
         private int _yScreen;
         private int _circleDim;
@@ -18,7 +18,6 @@ namespace EliteDangerousCrosshair2
 
         public BufferedPanel()
         {
-            _outline = new Pen(Color.Red);
             DoubleBuffered = true;
             ResizeRedraw = true;
             CircleDim = 50;
@@ -27,6 +26,12 @@ namespace EliteDangerousCrosshair2
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             UpdateStyles();
+        }
+
+        public void SetColor(Color color)
+        {
+            _outline.Color = color;
+            Invalidate();
         }
 
         public int CircleDim
