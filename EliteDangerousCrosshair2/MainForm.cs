@@ -183,7 +183,16 @@ namespace EliteDangerousCrosshair2
         {
             while (true)
             {
-                GameId = GameMonitor.GetSingleProcessByName("EliteDangerous32");
+                var ed32 = GameMonitor.GetSingleProcessByName("EliteDangerous32");
+                var ed64 = GameMonitor.GetSingleProcessByName("EliteDangerous64");
+
+                if (ed32.ToInt32() > 0)
+                {
+                    GameId = ed32;
+                } else
+                {
+                    GameId = ed64;
+                }
                 if (GameId.ToInt32() != 0)
                 {
                     var wl = new WindowLocation {Rect = GameMonitor.GetRect(GameId)};

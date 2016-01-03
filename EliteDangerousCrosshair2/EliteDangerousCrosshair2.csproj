@@ -58,10 +58,10 @@
     <ApplicationIcon>1416041238_131776.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C98A29CB63372AC1F3EADE3C231CDA837A3A81F5</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>120C9A2907B89CB0AA3E27138F00EF1E7B833DD4</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EliteDangerousCrosshair2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EliteDangerousCrosshair2_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -125,6 +125,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="EliteDangerousCrosshair2_1_TemporaryKey.pfx" />
     <None Include="EliteDangerousCrosshair2_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
