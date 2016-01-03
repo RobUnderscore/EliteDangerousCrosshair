@@ -1,4 +1,4 @@
-EliteDangerousCrosshair v1.21
+EliteDangerousCrosshair v1.2.2
 =======================
 
 Crosshair for Elite Dangerous to assist with piloting in Frameshift Mode/Docking. Download in the 'releases' section above.
@@ -8,7 +8,11 @@ Rewrote to deal with some FPS issues.
 Original code at https://github.com/RobCubed/EliteDangerousCrosshair_original
 
 ========================
-1.21 Changes:
+1.2.2 Changes:
+
+ - Added web deployment for future updates (http://www.robertwhittemore.com/publish/EliteDangerousCrosshair/publish.htm)
+ 
+1.2.1 Changes:
 
  - Added compatibility for 64 bit client
 
