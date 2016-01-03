@@ -10,7 +10,7 @@ Original code at https://github.com/RobCubed/EliteDangerousCrosshair_original
 ========================
 1.2.2 Changes:
 
- - Added web deployment for future updates (http://www.robertwhittemore.com/publish/EliteDangerousCrosshair/publish.htm)
+ - Tested web deployment (no functional change for users) will not automatically update
  
 1.2.1 Changes:
 
