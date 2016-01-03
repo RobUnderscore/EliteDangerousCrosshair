@@ -197,11 +197,10 @@ namespace EliteDangerousCrosshair2
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "EliteDangerousCrosshair v1.21";
+            this.Text = "EliteDangerousCrosshair v1.2.2";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
